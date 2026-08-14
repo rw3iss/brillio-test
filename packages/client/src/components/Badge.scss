@@ -1,0 +1,45 @@
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  border: 1px solid transparent;
+
+  &--available {
+    color: var(--ok);
+    border-color: rgba(63, 185, 80, 0.4);
+    background: rgba(63, 185, 80, 0.1);
+  }
+  &--degraded {
+    color: var(--warn);
+    border-color: rgba(227, 160, 8, 0.4);
+    background: rgba(227, 160, 8, 0.1);
+  }
+  &--unavailable {
+    color: var(--critical);
+    border-color: rgba(248, 81, 73, 0.4);
+    background: rgba(248, 81, 73, 0.1);
+  }
+}
+
+.kb-badge {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.2;
+
+  &__folder {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  &__meta {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+  &__warn {
+    color: var(--warn);
+    font-style: normal;
+  }
+}

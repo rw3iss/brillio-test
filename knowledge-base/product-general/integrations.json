@@ -1,0 +1,86 @@
+{
+  "$schema": "https://brillio.example/schemas/integrations.v1.json",
+  "module": "Brillio Connect",
+  "moduleVersion": "3.1",
+  "lastUpdated": "2024-11-05",
+  "integrations": [
+    {
+      "id": "salesforce",
+      "name": "Salesforce",
+      "category": "CRM",
+      "supported": true,
+      "minVersion": "Salesforce API v58.0 (Winter '24)",
+      "minVersionNumeric": "58.0",
+      "notes": "Requires Salesforce API v58.0 (Winter '24) or later. Connected App with OAuth 2.0 required. Supports Sales Cloud and Service Cloud. Available on Team tier and above.",
+      "auth": "OAuth 2.0 (Connected App)",
+      "availableFromTier": "team",
+      "directions": ["read", "write", "bidirectional"]
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "category": "Messaging",
+      "supported": true,
+      "minVersion": "Slack Web API (current)",
+      "auth": "OAuth 2.0",
+      "availableFromTier": "team",
+      "directions": ["write"]
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "category": "CRM/Marketing",
+      "supported": true,
+      "minVersion": "HubSpot API v3",
+      "auth": "OAuth 2.0 / Private App token",
+      "availableFromTier": "team",
+      "directions": ["read", "write", "bidirectional"]
+    },
+    {
+      "id": "jira",
+      "name": "Jira (Atlassian Cloud)",
+      "category": "Project Management",
+      "supported": true,
+      "minVersion": "Jira Cloud REST API v3",
+      "auth": "OAuth 2.0 (3LO)",
+      "availableFromTier": "team",
+      "directions": ["read", "write"]
+    },
+    {
+      "id": "snowflake",
+      "name": "Snowflake",
+      "category": "Data Warehouse",
+      "supported": true,
+      "minVersion": "Snowflake SQL API v2",
+      "auth": "Key-pair (JWT) or OAuth 2.0",
+      "availableFromTier": "pro",
+      "directions": ["read", "write"]
+    },
+    {
+      "id": "microsoft-dynamics",
+      "name": "Microsoft Dynamics 365",
+      "category": "CRM",
+      "supported": true,
+      "minVersion": "Dynamics 365 Web API v9.2",
+      "auth": "OAuth 2.0 (Azure AD)",
+      "availableFromTier": "pro",
+      "directions": ["read", "write", "bidirectional"]
+    },
+    {
+      "id": "netsuite",
+      "name": "Oracle NetSuite",
+      "category": "ERP",
+      "supported": false,
+      "minVersion": null,
+      "notes": "On the roadmap for Connect 3.3 (planned 2025).",
+      "availableFromTier": null
+    }
+  ],
+  "ssoIdentityProviders": [
+    { "id": "okta", "name": "Okta", "protocol": "SAML 2.0", "supported": true },
+    { "id": "azure-ad", "name": "Microsoft Entra ID (Azure AD)", "protocol": "SAML 2.0", "supported": true },
+    { "id": "google-workspace", "name": "Google Workspace", "protocol": "SAML 2.0", "supported": true },
+    { "id": "onelogin", "name": "OneLogin", "protocol": "SAML 2.0", "supported": true },
+    { "id": "pingfederate", "name": "PingFederate", "protocol": "SAML 2.0", "supported": true }
+  ]
+}

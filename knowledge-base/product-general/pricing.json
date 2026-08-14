@@ -1,0 +1,92 @@
+{
+  "$schema": "https://brillio.example/schemas/pricing.v1.json",
+  "currency": "USD",
+  "billingCycle": "annual",
+  "pricingModel": "per-seat",
+  "lastUpdated": "2024-11-05",
+  "tiers": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "pricePerSeatMonthly": 19,
+      "pricePerSeatAnnual": 228,
+      "minSeats": 3,
+      "supportLevel": "Community",
+      "uptimeSla": null,
+      "sso": { "saml2": false, "scim": false },
+      "apiRateLimitPerMin": 60,
+      "analyticsModule": "add-on",
+      "connectConnectors": 2,
+      "shieldTier": "Basic",
+      "auditLogRetentionDays": 7,
+      "dataResidency": ["US"]
+    },
+    {
+      "id": "team",
+      "name": "Team",
+      "pricePerSeatMonthly": 39,
+      "pricePerSeatAnnual": 468,
+      "minSeats": 5,
+      "supportLevel": "Standard",
+      "uptimeSla": "99.5%",
+      "sso": { "saml2": false, "scim": false },
+      "apiRateLimitPerMin": 300,
+      "analyticsModule": "add-on",
+      "connectConnectors": 10,
+      "shieldTier": "Basic",
+      "auditLogRetentionDays": 30,
+      "dataResidency": ["US", "EU"]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "pricePerSeatMonthly": 79,
+      "pricePerSeatAnnual": 948,
+      "minSeats": 10,
+      "supportLevel": "Priority",
+      "uptimeSla": "99.9%",
+      "sso": { "saml2": true, "scim": false },
+      "apiRateLimitPerMin": 1200,
+      "analyticsModule": "included",
+      "connectConnectors": "unlimited",
+      "shieldTier": "Standard",
+      "auditLogRetentionDays": 365,
+      "dataResidency": ["US", "EU", "APAC"]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "pricePerSeatMonthly": 149,
+      "pricePerSeatMonthlyNote": "starting price; custom-quoted with volume discounts",
+      "pricePerSeatAnnual": 1788,
+      "minSeats": 50,
+      "supportLevel": "Premier",
+      "supportNotes": "Dedicated Technical Account Manager (TAM), 24x7 coverage",
+      "uptimeSla": "99.95%",
+      "sso": { "saml2": true, "scim": true },
+      "apiRateLimitPerMin": 6000,
+      "analyticsModule": "included",
+      "connectConnectors": "unlimited + private/custom",
+      "shieldTier": "Advanced",
+      "auditLogRetentionDays": 2555,
+      "dataResidency": ["US", "EU", "APAC", "custom"]
+    }
+  ],
+  "addOns": [
+    {
+      "id": "analytics-module",
+      "name": "Brillio Analytics Module",
+      "pricePerSeatMonthly": 25,
+      "includedOn": ["pro", "enterprise"]
+    },
+    {
+      "id": "extra-api-capacity",
+      "name": "Additional API Capacity",
+      "unit": "+1000 req/min",
+      "pricePerMonth": 200
+    }
+  ],
+  "discounts": [
+    { "id": "nonprofit-edu", "percent": 30, "appliesTo": ["team", "pro"] }
+  ]
+}

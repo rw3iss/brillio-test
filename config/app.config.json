@@ -1,0 +1,64 @@
+{
+  "server": {
+    "port": 4180,
+    "corsOrigins": ["http://localhost:5173", "http://localhost:4173"]
+  },
+  "auth": {
+    "apiKeys": ["brillio-dev-key-2026"]
+  },
+  "defaults": {
+    "provider": "claude",
+    "systemPromptRef": "default"
+  },
+  "rag": {
+    "chunkSize": 900,
+    "chunkOverlap": 150,
+    "topK": 6,
+    "minScore": 0.05
+  },
+  "warnings": {
+    "warnPercent": 75,
+    "criticalPercent": 90
+  },
+  "providers": [
+    {
+      "id": "claude",
+      "name": "Claude (Anthropic)",
+      "model": "claude-opus-4-8",
+      "apiKeyEnv": "ANTHROPIC_API_KEY",
+      "contextWindow": 200000,
+      "pricing": { "inputPer1M": 5.0, "outputPer1M": 25.0, "currency": "USD" },
+      "enabled": true
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI GPT",
+      "model": "gpt-4o",
+      "apiKeyEnv": "OPENAI_API_KEY",
+      "contextWindow": 128000,
+      "pricing": { "inputPer1M": 2.5, "outputPer1M": 10.0, "currency": "USD" },
+      "enabled": true
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini",
+      "model": "gemini-3.6-flash",
+      "apiKeyEnv": "GEMINI_API_KEY",
+      "contextWindow": 1000000,
+      "pricing": { "inputPer1M": 0.1, "outputPer1M": 0.4, "currency": "USD" },
+      "enabled": true
+    },
+    {
+      "id": "mock",
+      "name": "Mock (offline demo)",
+      "model": "mock-1",
+      "apiKeyEnv": "",
+      "contextWindow": 128000,
+      "pricing": { "inputPer1M": 0.0, "outputPer1M": 0.0, "currency": "USD" },
+      "enabled": true
+    }
+  ],
+  "systemPrompts": {
+    "default": "You are Brillio Assistant, a precise product and technical support assistant. Answer ONLY using the provided KNOWLEDGE BASE CONTEXT. Rules: (1) If the context does not contain the answer, reply exactly that you do not have that information in the current knowledge base — never guess or fabricate. (2) Cite the document name(s) you used. (3) Be concise and direct; prefer bullet points for comparisons, steps for troubleshooting. (4) When asked about pricing, versions, SLAs, or compatibility, quote exact figures from the context."
+  }
+}

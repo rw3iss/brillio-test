@@ -1,0 +1,21 @@
+{
+  "name": "brillio",
+  "version": "1.0.0",
+  "description": "Streaming multi-provider chatbot backend + client with knowledge-base RAG",
+  "license": "ISC",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.0.9",
+  "scripts": {
+    "build:shared": "pnpm --filter @brillio/shared build",
+    "build": "pnpm -r build",
+    "dev:backend": "pnpm --filter @brillio/backend start:dev",
+    "dev:client": "pnpm --filter @brillio/client dev",
+    "kb:ingest": "pnpm --filter @brillio/backend kb:ingest",
+    "kb:gen-pdfs": "node knowledge-base/scripts/generate-pdfs.mjs"
+  },
+  "devDependencies": {
+    "pdfkit": "^0.19.1",
+    "typescript": "^5.6.3"
+  }
+}

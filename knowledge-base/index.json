@@ -1,0 +1,162 @@
+{
+  "groups": [
+    {
+      "id": "product-general",
+      "name": "Product & Pricing",
+      "description": "Product suite overview, plan tiers, pricing, feature comparisons, and integration compatibility. Primary reference for Sales Executives.",
+      "folder": "product-general",
+      "tags": ["pricing", "plans", "features", "sales", "compatibility"]
+    },
+    {
+      "id": "technical-docs",
+      "name": "Technical Documentation",
+      "description": "API reference, integration guides, technical specifications, SSO/SAML, and versioned release notes. For Support Engineers and Product Trainers.",
+      "folder": "technical-docs",
+      "tags": ["api", "integration", "sso", "saml", "release-notes", "specs"]
+    },
+    {
+      "id": "support-sla",
+      "name": "Support & SLA",
+      "description": "Support policies, SLA tiers and targets, troubleshooting runbooks, and error-code references. For Support Engineers.",
+      "folder": "support-sla",
+      "tags": ["sla", "support", "troubleshooting", "runbook", "errors"]
+    }
+  ],
+  "documents": [
+    {
+      "id": "pricing-and-tiers",
+      "name": "Pricing & Plan Tiers",
+      "path": "knowledge-base/product-general/pricing-and-tiers.md",
+      "type": "markdown",
+      "groups": ["product-general"],
+      "title": "Brillio Pricing & Plan Tiers",
+      "description": "Tier comparison (Starter/Team/Pro/Enterprise): price per seat, included seats, support level, SSO, API rate limits, and SLA. Includes a Pro vs Enterprise quick reference."
+    },
+    {
+      "id": "pricing-matrix",
+      "name": "Pricing Matrix (structured)",
+      "path": "knowledge-base/product-general/pricing.json",
+      "type": "json",
+      "groups": ["product-general"],
+      "title": "Structured Pricing Matrix",
+      "description": "Machine-readable pricing per tier: prices, min seats, support level, uptime SLA, SSO/SCIM flags, API rate limits, add-ons, and discounts."
+    },
+    {
+      "id": "product-suite-overview",
+      "name": "Product Suite Overview",
+      "path": "knowledge-base/product-general/product-suite-overview.md",
+      "type": "markdown",
+      "groups": ["product-general"],
+      "title": "Brillio Product Suite Overview",
+      "description": "Overview of Brillio Core, Analytics, Connect, and Shield with current module versions."
+    },
+    {
+      "id": "feature-comparison",
+      "name": "Feature Comparison Matrix",
+      "path": "knowledge-base/product-general/feature-comparison.md",
+      "type": "markdown",
+      "groups": ["product-general"],
+      "title": "Brillio Feature Comparison Matrix",
+      "description": "Feature-by-feature comparison across plan tiers for platform, analytics, integrations, security, and support."
+    },
+    {
+      "id": "integrations-matrix",
+      "name": "Integrations & Compatibility Matrix (structured)",
+      "path": "knowledge-base/product-general/integrations.json",
+      "type": "json",
+      "groups": ["product-general", "technical-docs"],
+      "title": "Brillio Connect Integrations Matrix",
+      "description": "Structured integration compatibility including Salesforce minimum version (API v58.0 / Winter '24), supported SSO identity providers, and per-integration auth and tier availability."
+    },
+    {
+      "id": "api-reference",
+      "name": "REST API Reference",
+      "path": "knowledge-base/technical-docs/api-reference.md",
+      "type": "markdown",
+      "groups": ["technical-docs"],
+      "title": "Brillio REST API Reference",
+      "description": "API v2 authentication, key scopes, rate limits by tier, HTTP status/error codes, and core endpoints."
+    },
+    {
+      "id": "release-notes",
+      "name": "Release Notes",
+      "path": "knowledge-base/technical-docs/release-notes.md",
+      "type": "markdown",
+      "groups": ["technical-docs"],
+      "title": "Brillio Release Notes",
+      "description": "Versioned, dated release notes including Brillio Analytics 4.2 (2024-10-15) new features."
+    },
+    {
+      "id": "integration-guide-salesforce",
+      "name": "Integration Guide: Salesforce",
+      "path": "knowledge-base/technical-docs/integration-guide-salesforce.md",
+      "type": "markdown",
+      "groups": ["technical-docs", "support-sla"],
+      "title": "Salesforce Integration Guide (Brillio Connect)",
+      "description": "How to integrate with Salesforce, including the required minimum Salesforce API v58.0 (Winter '24) and OAuth setup steps."
+    },
+    {
+      "id": "security-and-sso",
+      "name": "Security & SSO (SAML 2.0)",
+      "path": "knowledge-base/technical-docs/security-and-sso.md",
+      "type": "markdown",
+      "groups": ["technical-docs", "support-sla"],
+      "title": "Brillio Security & SSO (SAML 2.0) Whitepaper",
+      "description": "Which products/tiers support SSO via SAML 2.0 (Pro and Enterprise), supported IdPs, SCIM (Enterprise), and configuration steps."
+    },
+    {
+      "id": "security-and-sso-pdf",
+      "name": "Security & SSO Whitepaper (PDF)",
+      "path": "knowledge-base/technical-docs/security-and-sso.pdf",
+      "type": "pdf",
+      "groups": ["technical-docs", "support-sla"],
+      "title": "Brillio Security & SSO (SAML 2.0) Whitepaper (PDF)",
+      "description": "PDF edition of the Security & SSO whitepaper: SAML 2.0 support by tier, supported identity providers, and security controls."
+    },
+    {
+      "id": "technical-specs",
+      "name": "Technical Specifications",
+      "path": "knowledge-base/technical-docs/technical-specs.md",
+      "type": "markdown",
+      "groups": ["technical-docs"],
+      "title": "Brillio Technical Specifications",
+      "description": "Platform architecture, limits and quotas by tier, API essentials, data formats, and supported clients."
+    },
+    {
+      "id": "sla-and-support-policy",
+      "name": "SLA & Support Policy",
+      "path": "knowledge-base/support-sla/sla-and-support-policy.md",
+      "type": "markdown",
+      "groups": ["support-sla"],
+      "title": "Brillio SLA & Support Policy",
+      "description": "Support tiers and SLA response/resolution targets by priority, including P1 (1h response / 4h resolution, 24x7 on Pro & Enterprise), plus uptime SLAs."
+    },
+    {
+      "id": "sla-and-support-policy-pdf",
+      "name": "SLA & Support Policy (PDF)",
+      "path": "knowledge-base/support-sla/sla-and-support-policy.pdf",
+      "type": "pdf",
+      "groups": ["support-sla"],
+      "title": "Brillio SLA & Support Policy (PDF)",
+      "description": "PDF edition of the SLA & Support Policy with P1/P2/P3 response and resolution targets and coverage hours."
+    },
+    {
+      "id": "troubleshooting-runbook",
+      "name": "API Troubleshooting Runbook",
+      "path": "knowledge-base/support-sla/troubleshooting-runbook.md",
+      "type": "markdown",
+      "groups": ["support-sla", "technical-docs"],
+      "title": "Brillio API Troubleshooting Runbook",
+      "description": "Ordered checklists for common API errors, including the 403 first-response checklist (key validity, scopes, IP allowlist, plan entitlement, clock skew)."
+    },
+    {
+      "id": "error-codes",
+      "name": "Error Code Reference",
+      "path": "knowledge-base/support-sla/error-codes.md",
+      "type": "markdown",
+      "groups": ["support-sla"],
+      "title": "Brillio Error Code Reference",
+      "description": "Full BR-* error code reference by HTTP status with meanings and fixes."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+.landing {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(1200px 600px at 50% -10%, #182234 0%, var(--bg) 55%);
+
+  &__card {
+    width: 100%;
+    max-width: 460px;
+    padding: 36px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+    }
+  }
+  &__logo {
+    font-size: 26px;
+    color: var(--accent);
+  }
+
+  &__tagline {
+    margin: 12px 0 28px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .dd,
+    .dd__trigger {
+      width: 100%;
+    }
+  }
+
+  &__start {
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: var(--radius);
+
+    &:hover:not(:disabled) {
+      background: var(--accent-hover);
+    }
+    &:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+  }
+
+  &__loading,
+  &__empty {
+    padding: 16px 0;
+    color: var(--text-dim);
+  }
+
+  &__error {
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: var(--critical);
+    background: rgba(248, 81, 73, 0.1);
+    border: 1px solid rgba(248, 81, 73, 0.35);
+    border-radius: var(--radius-sm);
+  }
+
+  &__transport {
+    margin-top: 24px;
+    font-size: 11px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}

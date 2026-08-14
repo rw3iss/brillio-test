@@ -1,0 +1,55 @@
+.composer {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-elevated);
+
+  &__input {
+    flex: 1;
+    resize: none;
+    max-height: 180px;
+    min-height: 44px;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    &:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__btn {
+    padding: 0 20px;
+    height: 44px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+
+    &--send {
+      background: var(--accent);
+      &:hover:not(:disabled) {
+        background: var(--accent-hover);
+      }
+      &:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+      }
+    }
+    &--stop {
+      background: var(--critical);
+    }
+  }
+}

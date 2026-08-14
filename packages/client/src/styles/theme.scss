@@ -1,0 +1,66 @@
+// Design tokens for the Brillio client. Minimal, product-grade dark UI.
+:root {
+  --bg: #0e1116;
+  --bg-elevated: #161b22;
+  --bg-panel: #1b2029;
+  --bg-input: #10151c;
+  --border: #262d38;
+  --border-strong: #333c49;
+
+  --text: #e6edf3;
+  --text-dim: #9aa7b4;
+  --text-faint: #64707d;
+
+  --accent: #5b8cff;
+  --accent-hover: #6f9bff;
+
+  --user-bubble: #223049;
+  --assistant-bubble: #1b2029;
+
+  --ok: #3fb950;
+  --warn: #e3a008;
+  --critical: #f85149;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --mono: 'SF Mono', ui-monospace, 'Menlo', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
