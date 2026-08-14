@@ -1,9 +1,9 @@
 # NOTE:
-Before I sent this input (to Claude using Opus 4.8 model on 'high' effort), I queried the session for how it would typically handle "streaming" the agent responses (since that was a requirement), instead of waiting for the entire response, which is how I would normally do it. I did that because I never did "streaming" responses and I wasn't sure if it was a built-in feature (because that isn't something that would be possible otherwise), and turns out it is a feature - you just pass the input prompt to the JSON payload with a { 'stream': true }property, for most of the agent's, I think - at least that's what it said, and what it sort of designed before I then began the full implementation with the following input prompt.
+Before I sent this input (to Claude using Opus 4.8 model on 'high' effort), I queried the session for how it would typically handle "streaming" the agent responses (since that was a requirement), instead of waiting for the entire response, which is how I would normally do it. I did that because I never did "streaming" responses and I wasn't sure if it was a built-in feature (because that isn't something that would be possible otherwise), and turns out it is a feature - you just pass the input prompt to the JSON payload with a { 'stream': true } property, for most of the agents, I think - at least that's what it said, and what it sort of designed before I then began the full implementation with the following input prompt.
 
-Normally this prompt design would be a lot cleaner or more thorough, but we were really pressed for time for that entire tests, and I basically spent the entire time typing the following as fast as I could.
+Normally this prompt design would be a lot cleaner or more thorough, but we were really pressed for time for that entire test, and I basically spent the entire time typing the following as fast as I could.
 
-Also note that the there main agent providers (Claude, ChatGPT, Gemini) all require an API key to be used, but it will fallback to the local/mock system which works too.
+Also note that the main agent providers (Claude, ChatGPT, Gemini) all require an API key to be used, but it will fallback to the local/mock system which works too.
 
 # INPUT PROMPT:
 --------------------------------------------------------------------------------
